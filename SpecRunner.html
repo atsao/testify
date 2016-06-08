@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="node_modules/mocha/mocha.css">
+  <script src="node_modules/mocha/mocha.js"></script>
+  <script src="node_modules/chai/chai.js"></script>
+  <script src="node_modules/sinon/lib/sinon.js"></script>
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script>
+    mocha.setup('bdd');
+    var expect = chai.expect;
+    $(function() {
+      window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
+    });
+  </script>
+
+  <!-- Spec files -->
+  <script src="test/unit/utilities.js"></script>
+
+  <!-- Source files -->
+  <script src="client/scripts/todo/todo.api.js"></script>
+  <script src="client/scripts/todo/todo.App.js"></script>
+  <script src="client/scripts/todo/todo.js"></script>
+  <script src="client/scripts/todo/todo.polyfills.js"></script>
+  <script src="client/scripts/todo/todo.util.js"></script>
+
+</head>
+<body>
+<div id="mocha"></div>
+</body>
+</html>
